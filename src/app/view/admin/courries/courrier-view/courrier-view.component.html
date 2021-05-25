@@ -1,0 +1,87 @@
+<p-dialog header="Title" [(visible)]="viewDialog" [style]="{width: '450px'}"  header="CourrierView" [modal]="true">
+  <ng-template ptemplate="content">
+
+    <div class="p-field">
+      <label for="typeCourrier">TypeCourrier</label>
+      <input id="typeCourrier" type="text"[(ngModel)]="selected.typeCourrier" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="coordinateur">Coordinateur</label>
+      <input id="coordinateur" type="text"[(ngModel)]="selected.coordinateur" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="sousDossier">SousDossier</label>
+      <input id="sousDossier" type="text"[(ngModel)]="selected.sousDossier" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="ref">Reference</label>
+      <input id="ref" type="text"[(ngModel)]="selected.ref" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="annee">Annee</label>
+      <input id="annee" type="text"[(ngModel)]="selected.annee" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="indice">Indice</label>
+      <input id="indice" type="text"[(ngModel)]="selected.indice" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="numOrder">NumOrder</label>
+      <input id="numOrder" type="text"[(ngModel)]="selected.numOrder" disabeld/>
+    </div>
+
+
+    <div class="p-field">
+      <label for="dateCourrier">DateCourrier</label>
+      <input id="dateCourrier" type="text"[(ngModel)]="selected.dateCourrier" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="dateBureauOrdre">DateBureauOrdre</label>
+      <input id="dateBureauOrdre" type="text"[(ngModel)]="selected.dateBureauOrdre" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="objet">Objet</label>
+      <input id="objet" type="text"[(ngModel)]="selected.objet" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="sousTheme">SousTheme</label>
+      <input id="sousTheme" type="text"[(ngModel)]="selected.sousTheme" disabeld/>
+    </div>
+
+
+    <div class="p-field">
+      <label for="categorieCourrier">CategorieCourrier</label>
+      <input id="categorieCourrier" type="text"[(ngModel)]="selected.categorieCourrier" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="expediteur">expediteur</label>
+      <input id="expediteur" type="text"[(ngModel)]="selected.expediteur" disabeld/>
+    </div>
+
+
+    <div class="p-field">
+      <label for="typeExpediteur">TypeExpediteur</label>
+      <input id="typeExpediteur" type="text"[(ngModel)]="selected.typeExpediteur" disabeld/>
+    </div>
+
+  </ng-template>
+
+
+  <ng-template ptemplate="footer">
+
+    <button pButton pRippel label="Fermer" class="p-button-raised p-button-rounded"  class="p-button-text" icon="pi pi-times" (click)="hideViewDialog()"></button>
+
+
+  </ng-template>
+
+</p-dialog>

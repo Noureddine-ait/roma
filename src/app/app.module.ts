@@ -85,9 +85,8 @@ import {TooltipModule} from 'primeng/tooltip';
 import {TreeModule} from 'primeng/tree';
 import {TreeTableModule} from 'primeng/treetable';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
-
 import {AppComponent} from './app.component';
-import {AppCodeModule} from './app.code.component'
+import {AppCodeModule} from './app.code.component';
 import {AppMainComponent} from './app.main.component';
 import {AppConfigComponent} from './app.config.component';
 import {AppCrudComponent} from './pages/app.crud.component';
@@ -130,7 +129,6 @@ import {SpacingComponent} from './utilities/spacing.component';
 import {TypographyComponent} from './utilities/typography.component';
 import {TextComponent} from './utilities/text.component';
 import {WidgetsComponent} from './utilities/widgets.component';
-
 import {CountryService} from './demo/service/countryservice';
 import {EventService} from './demo/service/eventservice';
 import {NodeService} from './demo/service/nodeservice';
@@ -139,6 +137,26 @@ import {CustomerService} from './demo/service/customerservice';
 import {PhotoService} from './demo/service/photoservice';
 import {ProductService} from './demo/service/productservice';
 import {IconService} from './demo/service/iconservice';
+import {CourriesComponent} from './view/admin/courries/courries.component';
+import {CourrierListComponent} from './view/admin/courries/courrier-list/courrier-list.component';
+import {CourrierCreateComponent} from './view/admin/courries/courrier-create/courrier-create.component';
+import {CourrierEditComponent} from './view/admin/courries/courrier-edit/courrier-edit.component';
+import {CourrierViewComponent} from './view/admin/courries/courrier-view/courrier-view.component';
+import {ConsignesComponent} from './view/admin/consignes/consignes.component';
+import {ConsigneCreateComponent} from './view/admin/consignes/consigne-create/consigne-create.component';
+import {ConsigneEditComponent} from './view/admin/consignes/consigne-edit/consigne-edit.component';
+import {ConsigneListComponent} from './view/admin/consignes/consigne-list/consigne-list.component';
+import {ConsigneViewComponent} from './view/admin/consignes/consigne-view/consigne-view.component';
+import {ServicestraitantsComponent} from "./view/admin/servicestraitants/servicestraitants.component";
+import {ServicetraitantCreateComponent} from "./view/admin/servicestraitants/servicetraitant-create/servicetraitant-create.component";
+import {ServicetraitantEditComponent} from "./view/admin/servicestraitants/servicetraitant-edit/servicetraitant-edit.component";
+import {ServicetraitantViewComponent} from "./view/admin/servicestraitants/servicetraitant-view/servicetraitant-view.component";
+import {ServicetraitantListComponent} from "./view/admin/servicestraitants/servicetraitant-list/servicetraitant-list.component";
+import {TraitementsComponent} from "./view/admin/traitements/traitements.component";
+import {TraitementCreateComponent} from "./view/admin/traitements/traitement-create/traitement-create.component";
+import {TraitementViewComponent} from "./view/admin/traitements/traitement-view/traitement-view.component";
+import {TraitementListComponent} from "./view/admin/traitements/traitement-list/traitement-list.component";
+import {TraitementEditComponent} from "./view/admin/traitements/traitement-edit/traitement-edit.component";
 
 @NgModule({
     imports: [
@@ -272,7 +290,27 @@ import {IconService} from './demo/service/iconservice';
         AppNotfoundComponent,
         AppErrorComponent,
         AppAccessdeniedComponent,
-        AppLoginComponent
+        AppLoginComponent,
+        CourriesComponent,
+        CourrierListComponent,
+        CourrierCreateComponent,
+        CourrierEditComponent,
+        CourrierViewComponent,
+        ConsignesComponent,
+        ConsigneCreateComponent,
+        ConsigneEditComponent,
+        ConsigneListComponent,
+        ConsigneViewComponent,
+        ServicestraitantsComponent,
+        ServicetraitantCreateComponent,
+        ServicetraitantEditComponent,
+        ServicetraitantViewComponent,
+        ServicetraitantListComponent,
+        TraitementsComponent,
+        TraitementCreateComponent,
+        TraitementViewComponent,
+        TraitementListComponent,
+        TraitementEditComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

@@ -1,0 +1,103 @@
+<p-dialog header="Title" [(visible)]="editDialog" [style]="{width: '450px'}"  header="CourrierEdit" [modal]="true">
+  <ng-template ptemplate="content">
+
+<span class="p-float-label">
+    <input id="typeCourrier" type="text" [(ngModel)]="selected.typeCourrier"pInputText required autofocus/>
+    <label for="typeCourrier">TypeCourrier</label>
+<small class="p-invalid" *ngIf="submitted && !selected.typeCourrier">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="coordinateur" [(ngModel)]="selected.coordinateur" type="text"   pInputText required autofocus/>
+    <label for="coordinateur">Coordinateur</label>
+<small class="p-invalid" *ngIf="submitted && !selected.coordinateur">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="sousDossier" type="text" [(ngModel)]="selected.sousDossier" pInputText  required autofocus/>
+    <label for="sousDossier">SousDossier</label>
+<small class="p-invalid" *ngIf="submitted && !selected.sousDossier">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="ref" type="text"    [(ngModel)]="selected.ref" pInputText required autofocus/>
+    <label for="ref">Reference</label>
+<small class="p-invalid" *ngIf="submitted && !selected.ref">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="annee" type="text"[(ngModel)]="selected.annee" pInputText required autofocus/>
+    <label for="annee">Annee</label>
+<small class="p-invalid" *ngIf="submitted && !selected.annee">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="indice" type="text"[(ngModel)]="selected.indice" pInputText required autofocus/>
+    <label for="indice">Indice</label>
+<small class="p-invalid" *ngIf="submitted && !selected.indice">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="numOrder" type="text"[(ngModel)]="selected.numOrder" pInputText required autofocus/>
+    <label for="numOrder">NumOrder</label>
+<small class="p-invalid" *ngIf="submitted && !selected.numOrder">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="dateCourrier" type="text"[(ngModel)]="selected.dateCourrier" pInputText required autofocus/>
+    <label for="dateCourrier">DateCourrier</label>
+<small class="p-invalid" *ngIf="submitted && !selected.dateCourrier">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="dateBureauOrdre" type="text"[(ngModel)]="selected.dateBureauOrdre" pInputText required autofocus/>
+    <label for="dateBureauOrdre">DateBureauOrdre</label>
+<small class="p-invalid" *ngIf="submitted && !selected.dateBureauOrdre">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="objet" type="text"[(ngModel)]="selected.objet" pInputText required autofocus/>
+    <label for="objet">Objet</label>
+<small class="p-invalid" *ngIf="submitted && !selected.objet">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="sousTheme" type="text"[(ngModel)]="selected.sousTheme" pInputText required autofocus/>
+    <label for="sousTheme">SousTheme</label>
+<small class="p-invalid" *ngIf="submitted && !selected.sousTheme">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="categorieCourrier" type="text"[(ngModel)]="selected.categorieCourrier" pInputText required autofocus/>
+    <label for="categorieCourrier">CategorieCourrier</label>
+<small class="p-invalid" *ngIf="submitted && !selected.categorieCourrier">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="expediteur" type="text"[(ngModel)]="selected.expediteur" pInputText required autofocus/>
+    <label for="expediteur">Expediteur</label>
+<small class="p-invalid" *ngIf="submitted && !selected.expediteur">ce champs est obligatoire.</small>
+</span>
+
+    <span class="p-float-label">
+    <input id="typeExpediteur" type="text"[(ngModel)]="selected.typeExpediteur" pInputText required autofocus/>
+    <label for="typeExpediteur">TypeExpediteur</label>
+<small class="p-invalid" *ngIf="submitted && !selected.typeExpediteur">ce champs est obligatoire.</small>
+</span>
+
+  </ng-template>
+
+
+  <ng-template ptemplate="footer">
+
+    <button pButton pRippel label="Annuler" class="p-button-raised p-button-rounded"  class="p-button-text" icon="pi pi-times" (click)="hideEditDialog()"></button>
+
+    <button pButton pRippel label="Editer" class="p-button-raised p-button-rounded"  class="p-button-text" icon="pi pi-check" (click)="edit()"></button>
+
+  </ng-template>
+
+</p-dialog>

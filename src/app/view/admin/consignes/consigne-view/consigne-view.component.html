@@ -1,0 +1,39 @@
+<p-dialog header="Title" [(visible)]="viewDialog" [style]="{width: '450px'}"  header="ConsigneView" [modal]="true">
+  <ng-template ptemplate="content">
+
+    <div class="p-field">
+      <label for="courrier">Courrier</label>
+      <input id="courrier" type="text"[(ngModel)]="selected.courrier" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="libelle">Libelle</label>
+      <input id="libelle" type="text"[(ngModel)]="selected.libelle" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="dateConsigne">DateConsigne</label>
+      <input id="dateConsigne" type="text"[(ngModel)]="selected.dateConsigne" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="responsable">Responsable</label>
+      <input id="responsable" type="text"[(ngModel)]="selected.responsable" disabeld/>
+    </div>
+
+    <div class="p-field">
+      <label for="entiteAdmin">EntiteAdmin</label>
+      <input id="entiteAdmin" type="text"[(ngModel)]="selected.entiteAdmin" disabeld/>
+    </div>
+
+  </ng-template>
+
+
+  <ng-template ptemplate="footer">
+
+    <button pButton pRippel label="Fermer" class="p-button-raised p-button-rounded"  class="p-button-text" icon="pi pi-times" (click)="hideViewDialog()"></button>
+
+
+  </ng-template>
+
+</p-dialog>

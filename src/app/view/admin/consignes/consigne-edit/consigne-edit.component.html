@@ -1,0 +1,49 @@
+<p-dialog header="Title" [(visible)]="editDialog" [style]="{width: '450px'}"  header="ConsigneEdit" [modal]="true">
+  <ng-template ptemplate="content">
+
+<span class="p-float-label">
+    <input id="courrier" type="text" [(ngModel)]="selected.courrier"pInputText required autofocus/>
+    <label for="courrier">Courrier</label>
+<small class="p-invalid" *ngIf="submitted && !selected.courrier">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="libelle" [(ngModel)]="selected.libelle" type="text"   pInputText required autofocus/>
+    <label for="libelle">Libelle</label>
+<small class="p-invalid" *ngIf="submitted && !selected.libelle">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="dateConsigne" type="text" [(ngModel)]="selected.dateConsigne" pInputText  required autofocus/>
+    <label for="dateConsigne">DateConsigne</label>
+<small class="p-invalid" *ngIf="submitted && !selected.dateConsigne">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="responsable" type="text"    [(ngModel)]="selected.responsable" pInputText required autofocus/>
+    <label for="responsable">Responsable</label>
+<small class="p-invalid" *ngIf="submitted && !selected.responsable">ce champs est obligatoire.</small>
+</span>
+
+
+    <span class="p-float-label">
+    <input id="entiteAdmin" type="text"[(ngModel)]="selected.entiteAdmin" pInputText required autofocus/>
+    <label for="entiteAdmin">EntiteAdmin</label>
+<small class="p-invalid" *ngIf="submitted && !selected.entiteAdmin">ce champs est obligatoire.</small>
+</span>
+
+  </ng-template>
+
+
+  <ng-template ptemplate="footer">
+
+    <button pButton pRippel label="Annuler" class="p-button-raised p-button-rounded"  class="p-button-text" icon="pi pi-times" (click)="hideEditDialog()"></button>
+
+    <button pButton pRippel label="Editer" class="p-button-raised p-button-rounded"  class="p-button-text" icon="pi pi-check" (click)="edit()"></button>
+
+  </ng-template>
+
+</p-dialog>
