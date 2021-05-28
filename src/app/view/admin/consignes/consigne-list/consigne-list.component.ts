@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ConfirmationService, MessageService} from 'primeng/api';
 import {ConsigneCourrierService} from '../../../../controller/service/consigne-courrier.service';
 import {ConsigneCourrier} from '../../../../controller/model/consigne-courrier.model';
+import {CourrierService} from "../../../../controller/service/courrier.service";
 
 @Component({
     selector: 'app-consigne-list',
@@ -11,8 +12,8 @@ import {ConsigneCourrier} from '../../../../controller/model/consigne-courrier.m
 export class ConsigneListComponent implements OnInit {
     cols: any[];
     // tslint:disable-next-line:max-line-length
-    constructor(private messageService: MessageService, private confirmationService: ConfirmationService, private service: ConsigneCourrierService) {
-    }
+    constructor(private messageService: MessageService, private confirmationService: ConfirmationService, private service: ConsigneCourrierService) { }
+
 
     ngOnInit(): void {
         this.initCol();

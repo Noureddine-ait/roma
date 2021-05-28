@@ -50,14 +50,14 @@
             <td>
               <p-tablecheckbox [value]="courrier"></p-tablecheckbox>
             </td>
-            <td>{{courrier.typeCourrier}}</td>
-            <td>{{courrier.coordinateur}}</td>
+            <td>{{courrier.typeCourrier?.code}}</td>
+            <td>{{courrier.coordinateur?.code}}</td>
             <td>{{courrier.ref}}</td>
             <td>{{courrier.numOrder}}</td>
             <td>{{courrier.dateCourrier}}</td>
             <td>{{courrier.dateBureauOrdre}}</td>
             <td>{{courrier.objet}}</td>
-            <td>{{courrier.expediteur}}</td>
+            <td>{{courrier.expediteur?.code}}</td>
             <td>
               <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="edit(courrier)"></button>
               <button pButton pRipple icon="pi pi-list" class="p-button-rounded p-button-info p-mr-2" (click)="view(courrier)"></button>
@@ -74,7 +74,7 @@
     </div>
     <app-courrier-create></app-courrier-create>
     <app-courrier-edit></app-courrier-edit>
-    <app-courrier-view></app-courrier-view>
+<!--    <app-courrier-view></app-courrier-view>-->
     <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
   </div>
 </div>

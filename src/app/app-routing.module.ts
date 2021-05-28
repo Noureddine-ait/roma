@@ -38,7 +38,10 @@ import {AppErrorComponent} from './pages/app.error.component';
 import {AppAccessdeniedComponent} from './pages/app.accessdenied.component';
 import {AppLoginComponent} from './pages/app.login.component';
 import {CourriesComponent} from './view/admin/courries/courries.component';
-import {CourrierListComponent} from './view/admin/courries/courrier-list/courrier-list.component';
+import {CourrierCreateComponent} from './view/admin/courries/courrier-create/courrier-create.component';
+import {ConsignesComponent} from './view/admin/consignes/consignes.component';
+import {TraitementsComponent} from './view/admin/traitements/traitements.component';
+import {ServicestraitantsComponent} from './view/admin/servicestraitants/servicestraitants.component';
 
 @NgModule({
     imports: [
@@ -47,23 +50,11 @@ import {CourrierListComponent} from './view/admin/courries/courrier-list/courrie
                 path: '', component: AppMainComponent,
                 children: [
                     {path: '', component: DashboardDemoComponent},
-                    {path: 'view/courrier', component: CourriesComponent},
                     {path: 'uikit/formlayout', component: FormLayoutDemoComponent},
-                    {path: 'uikit/floatlabel', component: FloatLabelDemoComponent},
-                    {path: 'uikit/invalidstate', component: InvalidStateDemoComponent},
-                    {path: 'uikit/input', component: InputDemoComponent},
-                    {path: 'uikit/button', component: ButtonDemoComponent},
-                    {path: 'uikit/table', component: TableDemoComponent},
-                    {path: 'uikit/list', component: ListDemoComponent},
-                    {path: 'uikit/tree', component: TreeDemoComponent},
-                    {path: 'uikit/panel', component: PanelsDemoComponent},
-                    {path: 'uikit/overlay', component: OverlaysDemoComponent},
-                    {path: 'uikit/media', component: MediaDemoComponent},
-                    {path: 'uikit/menu', component: MenusDemoComponent},
-                    {path: 'uikit/message', component: MessagesDemoComponent},
-                    {path: 'uikit/misc', component: MiscDemoComponent},
-                    {path: 'uikit/charts', component: ChartsDemoComponent},
-                    {path: 'uikit/file', component: FileDemoComponent},
+                    {path: 'courrier/create', component: CourriesComponent},
+                    {path: 'courrier/consigne', component: ConsignesComponent},
+                    {path: 'courrier/traitement', component: TraitementsComponent},
+                    {path: 'courrier/Servicetraitant', component: ServicestraitantsComponent},
                     {path: 'utilities/display', component: DisplayComponent},
                     {path: 'utilities/elevation', component: ElevationComponent},
                     {path: 'utilities/flexbox', component: FlexboxComponent},

@@ -147,16 +147,16 @@ import {ConsigneCreateComponent} from './view/admin/consignes/consigne-create/co
 import {ConsigneEditComponent} from './view/admin/consignes/consigne-edit/consigne-edit.component';
 import {ConsigneListComponent} from './view/admin/consignes/consigne-list/consigne-list.component';
 import {ConsigneViewComponent} from './view/admin/consignes/consigne-view/consigne-view.component';
-import {ServicestraitantsComponent} from "./view/admin/servicestraitants/servicestraitants.component";
-import {ServicetraitantCreateComponent} from "./view/admin/servicestraitants/servicetraitant-create/servicetraitant-create.component";
-import {ServicetraitantEditComponent} from "./view/admin/servicestraitants/servicetraitant-edit/servicetraitant-edit.component";
-import {ServicetraitantViewComponent} from "./view/admin/servicestraitants/servicetraitant-view/servicetraitant-view.component";
-import {ServicetraitantListComponent} from "./view/admin/servicestraitants/servicetraitant-list/servicetraitant-list.component";
-import {TraitementsComponent} from "./view/admin/traitements/traitements.component";
-import {TraitementCreateComponent} from "./view/admin/traitements/traitement-create/traitement-create.component";
-import {TraitementViewComponent} from "./view/admin/traitements/traitement-view/traitement-view.component";
-import {TraitementListComponent} from "./view/admin/traitements/traitement-list/traitement-list.component";
-import {TraitementEditComponent} from "./view/admin/traitements/traitement-edit/traitement-edit.component";
+import {ServicestraitantsComponent} from './view/admin/servicestraitants/servicestraitants.component';
+import {ServicetraitantCreateComponent} from './view/admin/servicestraitants/servicetraitant-create/servicetraitant-create.component';
+import {ServicetraitantEditComponent} from './view/admin/servicestraitants/servicetraitant-edit/servicetraitant-edit.component';
+import {ServicetraitantViewComponent} from './view/admin/servicestraitants/servicetraitant-view/servicetraitant-view.component';
+import {ServicetraitantListComponent} from './view/admin/servicestraitants/servicetraitant-list/servicetraitant-list.component';
+import {TraitementsComponent} from './view/admin/traitements/traitements.component';
+import {TraitementCreateComponent} from './view/admin/traitements/traitement-create/traitement-create.component';
+import {TraitementViewComponent} from './view/admin/traitements/traitement-view/traitement-view.component';
+import {TraitementListComponent} from './view/admin/traitements/traitement-list/traitement-list.component';
+import {TraitementEditComponent} from './view/admin/traitements/traitement-edit/traitement-edit.component';
 
 @NgModule({
     imports: [

@@ -3,6 +3,7 @@ import {ConsigneCourrier} from '../model/consigne-courrier.model';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {Observable} from 'rxjs';
+import {Courrier} from "../model/courrier.model";
 
 @Injectable({
   providedIn: 'root'
@@ -94,6 +95,9 @@ export class ConsigneCourrierService {
   }
 
   get selected(): ConsigneCourrier {
+    if (this._selected == null ) {
+      this._selected = new ConsigneCourrier();
+    }
     return this._selected;
   }
 

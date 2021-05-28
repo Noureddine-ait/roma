@@ -10,9 +10,9 @@ import {ConsigneCourrier} from './consigne-courrier.model';
 
 export class Courrier {
   public id: number;
-  public typeCourrier: TypeCourrier;
-  public coordinateur: EntiteAdmin;
-  public sousDossier: SousDossier;
+  public typeCourrier = new TypeCourrier();
+  public coordinateur =  new EntiteAdmin();
+  public sousDossier =  new  SousDossier();
   public ref: string;
   public annee: string;
   public indice: string;
@@ -20,10 +20,10 @@ export class Courrier {
   public dateCourrier: Date;
   public dateBureauOrdre: Date;
   public objet: string;
-  public sousTheme: SousTheme;
-  public categorieCourrier: CategorieCourrier;
-  public expediteur: Expediteur;
-  public typeExpediteur: TypeExpediteur;
+  public sousTheme =  new SousTheme();
+  public categorieCourrier =  new CategorieCourrier();
+  public expediteur =  new Expediteur();
+  public typeExpediteur =  new TypeExpediteur();
   public traitements = new Array<TraitementCourrier>();
   public consignes = new Array<ConsigneCourrier>();
 

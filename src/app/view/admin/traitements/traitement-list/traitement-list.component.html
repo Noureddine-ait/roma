@@ -5,10 +5,10 @@
     <p-toolbar styleClass="p-mb-4">
       <ng-template pTemplate=" left">
         <button pButton pRipple label="Noveau" icon="pi pi-plus" class="p-button-success p-mr-2 p-mb-2"(click)="openCreate()"></button>
-        <button pButton pRipple label="Noveau" icon="pi pi-trash" class="p-button-danger  p-mb-2"(click)="deleteMultiple()"[disabled]="!selectes|| !selectes.legth"></button>
+        <button pButton pRipple label="Noveau" icon="pi pi-trash" class="p-button-danger  p-mb-2"(click)="deleteMultiple()"[disabled]="!selectes|| !selectes.length"></button>
       </ng-template>
     </p-toolbar>
-    <p-table #dt [value]="items" [colums]="cols" [rows]="4" [paginator]="true"  [globalFiltrerFields]="['courrier','libelle','dateTraitement','responsable','entiteAdmin']"
+    <p-table #dt [value]="items" [columns]="cols" [rows]="4" [paginator]="true"  [globalFilterFields]="['courrier','libelle','dateTraitement','responsable','entiteAdmin']"
              [(selection)]="selectes" [rowHover]= "true" dataKey="id"
              styleClass="p-datatable-customers"
              currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">

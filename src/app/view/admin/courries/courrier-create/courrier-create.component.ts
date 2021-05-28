@@ -24,7 +24,7 @@ export class CourrierCreateComponent implements OnInit {
 
   public save() {
     this.submitted = true;
-    if(this.selected.ref.trim()) {
+    console.log('haaa selected ' + this.selected);
       this.service.save().subscribe(data => {
         this.items.push({...data});
         this.messageService.add({
@@ -33,9 +33,10 @@ export class CourrierCreateComponent implements OnInit {
           detail: 'Courrier Cree avec succes',
           life: 3000
         });
+      }, error => {
+        console.log(error.message);
       });
-      this.createDialog  = false;
-    }
+    this.createDialog  = false;
   }
 
 

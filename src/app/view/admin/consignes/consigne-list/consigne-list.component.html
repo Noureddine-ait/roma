@@ -1,71 +1,84 @@
 <div class="p-grid">
-  <div class="p-col-12">
-<p-toast></p-toast>
-<div class= "card">
-  <p-toolbar styleClass="p-mb-4">
-<ng-template pTemplate=" left">
-  <button pButton pRipple label="Noveau" icon="pi pi-plus" class="p-button-success p-mr-2 p-mb-2"(click)="openCreate()"></button>
-  <button pButton pRipple label="Noveau" icon="pi pi-trash" class="p-button-danger  p-mb-2"(click)="deleteMultiple()"[disabled]="!selectes|| !selectes.length"></button>
-  </ng-template>
-  </p-toolbar>
-  <p-table #dt [value]="items" [columns]="cols" [rows]="4" [paginator]="true"  [globalFilterFields]="['courrier','libelle','courrier','dateConsigne','responsable','entiteAdmin']"
-           [(selection)]="selectes" [rowHover]= "true" dataKey="id"
-  styleClass="p-datatable-customers"
-  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
-  <ng-template pTemplate="caption">
-    <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between table-header">
+    <div class="p-col-12">
+        <p-toast></p-toast>
+        <div class="card">
+            <p-toolbar styleClass="p-mb-4">
+                <ng-template pTemplate=" left">
+                    <button pButton pRipple label="Noveau" icon="pi pi-plus" class="p-button-success p-mr-2 p-mb-2"
+                            (click)="openCreate()"></button>
+                    <button pButton pRipple label="Noveau" icon="pi pi-trash" class="p-button-danger  p-mb-2"
+                            (click)="deleteMultiple()" [disabled]="!selectes|| !selectes.length"></button>
+                </ng-template>
+            </p-toolbar>
+            <p-table #dt [value]="items" [columns]="cols" [rows]="4" [paginator]="true"
+                     [globalFilterFields]="['courrier.ref','libelle','dateConsigne','responsable.login','entiteAdmin.code']"
+                     [(selection)]="selectes" [rowHover]="true" dataKey="id"
+                     styleClass="p-datatable-customers"
+                     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                     [showCurrentPageReport]="true">
+                <ng-template pTemplate="caption">
+                    <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between table-header">
+                        <h5 class="p-m-0">CONSIGNES</h5>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width: 3rem">
+                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                        </th>
+                        <th pSortableColumn="courrier">Courrier
+                            <p-sortIcon field="courrier.ref"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="libelle">Libelle
+                            <p-sortIcon field="libelle"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="dateConsigne">DateConsigne
+                            <p-sortIcon field="dateConsigne"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="responsable">Responsable
+                            <p-sortIcon field="responsable.login"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="entiteAdmin">EntiteAdmin
+                            <p-sortIcon field="entiteAdmin"></p-sortIcon>
+                        </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-consigneCourrier>
 
-<h5 class="p-m-0">CONSIGNES</h5>
-    <span class="p-input-icon-left">
-<i class="pi pi-search"></i>
-<input pInput Text type="text" placeholder="Search..."/>
-</span>
-</div>
-</ng-template>
-<ng-template pTemplate="header">
-  <tr>+
-    <th style="width: 3rem">
-      <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-    </th>
-    <th>pSortableColumn="courrier">Courrier<p-sortIcon field="courrier"></p-sortIcon></th>
-    <th>pSortableColumn="libelle">Libelle<p-sortIcon field="libelle"></p-sortIcon></th>
-    <th>pSortableColumn="dateConsigne">DateConsigne<p-sortIcon field="dateConsigne"></p-sortIcon></th>
-    <th>pSortableColumn="responsable">Responsable<p-sortIcon field="responsable"></p-sortIcon></th>
-    <th>pSortableColumn="entiteAdmin">EntiteAdmin<p-sortIcon field="entiteAdmin"></p-sortIcon></th>
-    <th></th>
-    <th></th>
-  </tr>
-</ng-template>
-<ng-template pTemplate="body" let-consigneCourrier>
-
-  <tr>
-    <td>
-      <p-tablecheckbox [value]="consigneCourrier"></p-tablecheckbox>
-    </td>
-    <td>{{consigneCourrier.courrier}}</td>
-    <td>{{consigneCourrier.libelle}}</td>
-    <td>{{consigneCourrier.dateConsigne}}</td>
-    <td>{{consigneCourrier.responsable}}</td>
-    <td>{{consigneCourrier.entiteAdmin}}</td>
-    <td>
-      <button pButton pRipple  icon="pi pi-pencil" class="  p-button-rounded p-button-success p-mr-2 "(click)="edit(consigneCourrier)"></button>
-      <button pButton pRipple  icon="pi pi-list" class="p-button-rounded p-button-info p-mr-2 "(click)="view(consigneCourrier)"></button>
-      <button pButton pRipple  icon="pi pi-trash" class=" p-button-rounded p-button-danger"(click)="delete(consigneCourrier)"></button>
-    </td>
-  </tr>
-</ng-template>
-<ng-template pTemplate="summary">
-  <div class="p-d-flex p-ai-center p-jc-between">
-    In total there are {{items? items.length:0}} items.
-  </div>
-</ng-template>
-</p-table>
-</div>
-<app-consigne-create></app-consigne-create>
-<app-consigne-edit></app-consigne-edit>
-<app-consigne-view></app-consigne-view>
-<p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
-</div>
+                    <tr>
+                        <td>
+                            <p-tablecheckbox [value]="consigneCourrier"></p-tablecheckbox>
+                        </td>
+                        <td>{{consigneCourrier.courrier?.ref}}</td>
+                        <td>{{consigneCourrier.libelle}}</td>
+                        <td>{{consigneCourrier.dateConsigne}}</td>
+                        <td>{{consigneCourrier.responsable?.login}}</td>
+                        <td>{{consigneCourrier.entiteAdmin?.code}}</td>
+                        <td>
+                            <button pButton pRipple icon="pi pi-pencil"
+                                    class="  p-button-rounded p-button-success p-mr-2 "
+                                    (click)="edit(consigneCourrier)"></button>
+                            <button pButton pRipple icon="pi pi-list" class="p-button-rounded p-button-info p-mr-2 "
+                                    (click)="view(consigneCourrier)"></button>
+                            <button pButton pRipple icon="pi pi-trash" class=" p-button-rounded p-button-danger"
+                                    (click)="delete(consigneCourrier)"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary">
+                    <div class="p-d-flex p-ai-center p-jc-between">
+                        In total there are {{items ? items.length : 0}} items.
+                    </div>
+                </ng-template>
+            </p-table>
+        </div>
+        <app-consigne-create></app-consigne-create>
+        <app-consigne-edit></app-consigne-edit>
+        <app-consigne-view></app-consigne-view>
+        <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+    </div>
 
 
 </div>

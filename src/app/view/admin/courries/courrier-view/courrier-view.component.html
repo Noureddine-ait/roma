@@ -1,81 +1,106 @@
 <p-dialog header="Title" [(visible)]="viewDialog" [style]="{width: '450px'}"  header="CourrierView" [modal]="true">
-  <ng-template ptemplate="content">
+  <ng-template pTemplate="content">
 
-    <div class="p-field">
+    <div class="p-float-label">
+      <input id="typeCourrier" type="text" [(ngModel)]="selected.typeCourrier.code" pInputText required
+             autofocus/>
       <label for="typeCourrier">TypeCourrier</label>
-      <input id="typeCourrier" type="text"[(ngModel)]="selected.typeCourrier" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.typeCourrier">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="coordinateur" [(ngModel)]="selected.coordinateur.code" type="text" pInputText required
+             autofocus/>
       <label for="coordinateur">Coordinateur</label>
-      <input id="coordinateur" type="text"[(ngModel)]="selected.coordinateur" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.coordinateur">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="sousDossier" [(ngModel)]="selected.sousDossier.code" type="text" pInputText required autofocus/>
       <label for="sousDossier">SousDossier</label>
-      <input id="sousDossier" type="text"[(ngModel)]="selected.sousDossier" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.sousDossier">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="ref" [(ngModel)]="selected.ref" type="text" pInputText required autofocus/>
       <label for="ref">Reference</label>
-      <input id="ref" type="text"[(ngModel)]="selected.ref" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.ref">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="annee" [(ngModel)]="selected.annee" type="text" pInputText required autofocus/>
       <label for="annee">Annee</label>
-      <input id="annee" type="text"[(ngModel)]="selected.annee" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.annee">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="indice" [(ngModel)]="selected.indice" type="text" pInputText required autofocus/>
       <label for="indice">Indice</label>
-      <input id="indice" type="text"[(ngModel)]="selected.indice" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.indice">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="numOrder" [(ngModel)]="selected.numOrder" type="text" pInputText required autofocus/>
       <label for="numOrder">NumOrder</label>
-      <input id="numOrder" type="text"[(ngModel)]="selected.numOrder" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.numOrder">ce champs est obligatoire.</small>
     </div>
 
 
-    <div class="p-field">
+    <div class="p-float-label">
+      <input id="dateCourrier" [(ngModel)]="selected.dateCourrier" type="text" pInputText required autofocus/>
       <label for="dateCourrier">DateCourrier</label>
-      <input id="dateCourrier" type="text"[(ngModel)]="selected.dateCourrier" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.dateCourrier">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="dateBureauOrdre" [(ngModel)]="selected.dateBureauOrdre" type="text" pInputText required
+             autofocus/>
       <label for="dateBureauOrdre">DateBureauOrdre</label>
-      <input id="dateBureauOrdre" type="text"[(ngModel)]="selected.dateBureauOrdre" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.dateBureauOrdre">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+    <div class="p-float-label">
+      <input id="objet" type="text" [(ngModel)]="selected.objet" pInputText required autofocus/>
       <label for="objet">Objet</label>
-      <input id="objet" type="text"[(ngModel)]="selected.objet" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.objet">ce champs est obligatoire.</small>
     </div>
 
-    <div class="p-field">
+
+    <div class="p-float-label">
+      <input id="sousTheme" type="text" [(ngModel)]="selected.sousTheme.code" pInputText required autofocus/>
       <label for="sousTheme">SousTheme</label>
-      <input id="sousTheme" type="text"[(ngModel)]="selected.sousTheme" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.sousTheme">ce champs est obligatoire.</small>
     </div>
 
 
-    <div class="p-field">
+    <div class="p-float-label">
+      <input id="categorieCourrier" type="text" [(ngModel)]="selected.categorieCourrier.code" pInputText required
+             autofocus/>
       <label for="categorieCourrier">CategorieCourrier</label>
-      <input id="categorieCourrier" type="text"[(ngModel)]="selected.categorieCourrier" disabeld/>
-    </div>
-
-    <div class="p-field">
-      <label for="expediteur">expediteur</label>
-      <input id="expediteur" type="text"[(ngModel)]="selected.expediteur" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.categorieCourrier">ce champs est obligatoire.</small>
     </div>
 
 
-    <div class="p-field">
+    <div class="p-float-label">
+      <input id="expediteur" type="text" [(ngModel)]="selected.expediteur.code" pInputText required autofocus/>
+      <label for="expediteur">Expediteur</label>
+      <small class="p-invalid" *ngIf="submitted && !selected.expediteur">ce champs est obligatoire.</small>
+    </div>
+
+    <div class="p-float-label">
+      <input id="typeExpediteur" type="text" [(ngModel)]="selected.typeExpediteur.code" pInputText required autofocus/>
       <label for="typeExpediteur">TypeExpediteur</label>
-      <input id="typeExpediteur" type="text"[(ngModel)]="selected.typeExpediteur" disabeld/>
+      <small class="p-invalid" *ngIf="submitted && !selected.typeExpediteur">ce champs est obligatoire.</small>
     </div>
 
   </ng-template>
-
 
   <ng-template ptemplate="footer">
 

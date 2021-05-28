@@ -41,7 +41,7 @@ export class CourrierService {
 
 
   public deleteByReference(): Observable<number> {
-    return this.http.delete<number>(this._url + 'reference/' + this.selected.ref);
+    return this.http.delete<number>(this._url + 'ref/' + this.selected.ref);
   }
 
 
@@ -95,6 +95,9 @@ export class CourrierService {
   }
 
   get selected(): Courrier {
+    if (this._selected == null ){
+      this._selected = new Courrier();
+    }
     return this._selected;
   }
 

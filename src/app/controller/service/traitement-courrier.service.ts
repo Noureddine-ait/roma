@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {TraitementCourrier} from '../model/traitement-courrier.model';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
-import {Courrier} from "../model/courrier.model";
+import {Courrier} from '../model/courrier.model';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -95,6 +95,9 @@ export class TraitementCourrierService {
   }
 
   get selected(): TraitementCourrier {
+    if (this._selected == null ) {
+      this._selected = new TraitementCourrier();
+    }
     return this._selected;
   }
 

@@ -4,10 +4,10 @@ import {EntiteAdmin} from './entite-admin.model';
 
 export class TraitementCourrier {
   public id: number;
-  public courrier: Courrier;
+  public courrier =  new Courrier();
   public ref: string;
   public libelle: string;
   public dateTraitement: Date;
-  public responsable: User;
-  public entiteAdmin: EntiteAdmin;
+  public responsable =  new User();
+  public entiteAdmin =  new EntiteAdmin();
 }
